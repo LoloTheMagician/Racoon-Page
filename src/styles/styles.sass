@@ -1,0 +1,17 @@
+@forward 'base'
+@use 'base/_typography' as typo 
+
+// TODO: reubicar variable en otra carpeta/archivo
+$gap: .5rem
+
+html
+    font-family: typo.$font-family
+    font-size: typo.$font-size
+
+// TODO: Pensar sistema de organización de estilos
+.nav__a
+    margin-right: $gap
+    &:first-child
+        padding-left: $gap
+p
+    padding: $gap
