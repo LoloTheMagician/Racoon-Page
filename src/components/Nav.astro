@@ -1,0 +1,25 @@
+---
+import { toCapitalize } from "../utils/capitalize";
+
+const pages = await Astro.glob("./../pages/*.astro");
+
+const home = "Home";
+
+const routes = pages.map(({ url }) => {
+    const urlName = url.split("/").at(1);
+    const name = urlName ? toCapitalize(urlName) : home;
+
+    return {
+        route: name,
+        url: url || "/",
+    };
+});
+---
+
+<article>
+    {
+        routes?.map(({ route, url }) => {
+            return <a class="nav__a" href={url}>{route}</a>;
+        })
+    }
+</article>
