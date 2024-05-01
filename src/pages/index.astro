@@ -1,7 +1,20 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Text } from "../components/index";
 ---
 
 <Layout title="Home">
-	<p>Home</p>
+	<header class="main-header">
+		<Text animation={["end start", "start start"]} client:load>
+			<h1 class="main-header__title">Racoon Attack</h1>
+		</Text>
+		<Text animation={["end start", "start start"]} client:load>
+			<p class="main-header__p">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+				maxime ipsum alias corporis sequi? Earum quae officia placeat
+				quidem dicta maxime nesciunt molestiae voluptate quibusdam, ea,
+				enim saepe voluptas quis!
+			</p>
+		</Text>
+	</header>
 </Layout>
