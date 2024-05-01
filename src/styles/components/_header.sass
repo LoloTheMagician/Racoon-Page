@@ -1,0 +1,14 @@
+@use './../utils/_mixins' as mixins
+
+.main-header
+    @include mixins.center()
+    @include mixins.flex-column()
+
+    height: 100vh
+
+.main-header__title
+    font-size: 4rem
+
+.main-header__p
+    font-size: 1rem
+    padding: 1rem

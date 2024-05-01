@@ -1,5 +1,5 @@
 ---
-import { Head, Nav, SmoothScroll } from "./../components/index";
+import { Head, SmoothScroll } from "./../components/index";
 import "./../styles/styles.sass";
 
 interface Props {
@@ -14,7 +14,6 @@ const { title } = Astro.props;
     <body>
         <SmoothScroll client:load>
             <slot />
-            <Nav />
         </SmoothScroll>
     </body>
 </html>

@@ -19,7 +19,11 @@ const routes = pages.map(({ url }) => {
 <article>
     {
         routes?.map(({ route, url }) => {
-            return <a class="nav__a" href={url}>{route}</a>;
+            return (
+                <a class="nav__a" href={url}>
+                    {route}
+                </a>
+            );
         })
     }
 </article>

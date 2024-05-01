@@ -1,5 +1,7 @@
 @forward 'base'
+@forward 'components'
 @use 'base/_typography' as typo 
+@use 'utils/_colors' as color
 
 // TODO: reubicar variable en otra carpeta/archivo
 $gap: .5rem
@@ -7,9 +9,14 @@ $gap: .5rem
 html
     font-family: typo.$font-family
     font-size: typo.$font-size
+    background-color: color.$secondary-color
 
 body
     height: 200vh
+
+h1,
+a
+    color: color.$main-color
 
 // TODO: Pensar sistema de organización de estilos
 .nav__a
@@ -17,6 +24,9 @@ body
     margin-right: $gap
     &:first-child
         padding-left: $gap
+
 p
+    color: color.$main-color
+    font-size: 1rem
     padding-inline: $gap
     padding-top: $gap
