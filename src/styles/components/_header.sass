@@ -1,14 +1,27 @@
 @use './../utils/_mixins' as mixins
+@use './../utils/_colors' as color
 
 .main-header
     @include mixins.center()
     @include mixins.flex-column()
-
     height: 100vh
+    background-color: plum
 
 .main-header__title
     font-size: 4rem
+    color: color.$secondary-color
 
 .main-header__p
     font-size: 1rem
-    padding: 1rem
+    line-height: 1.5
+    color: color.$main-color
+    display: flex
+    flex-wrap: wrap
+    padding-inline: 2rem
+
+.main-header__span
+    margin-right: 8px
+    position: relative
+    &-shadow
+        position: absolute
+        opacity: .3
